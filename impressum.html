@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Impressum - Du'ana Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        :root {
+            --bg-color: #f4eee4;
+            --text-dark: #5a5446;
+            --gold: #b8a87a;
+            --brown: #8b7355;
+            --green: #768b74;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-dark);
+            background: var(--bg-color);
+            min-height: 100vh;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            background-color: #DCD3C9;
+            backdrop-filter: blur(5px);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        
+        .logo-img { 
+            height: 40px; 
+            width: auto;
+            margin-left: -6px; 
+        }
+        
+        .logo-text { 
+            font-size: 20px; 
+            font-weight: 500; 
+            color: #8b7d5f;
+        }
+
+        .nav-list { 
+            display: flex; 
+            list-style: none; 
+            gap: 30px; 
+        }
+        
+        .nav-list a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: 'Lato', sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-list a:hover {
+            color: var(--brown);
+        }
+
+        /* --- IMPRESSUM SECTION --- */
+        .impressum-section {
+            padding-top: 100px;
+            padding-bottom: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .impressum-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 2px;
+            padding: 60px 50px;
+            box-shadow: 
+                0 10px 40px rgba(139, 115, 85, 0.15),
+                0 2px 8px rgba(139, 115, 85, 0.08);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Decorative Corner Elements */
+        .impressum-container::before,
+        .impressum-container::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 1px solid rgba(184, 168, 122, 0.3);
+        }
+
+        .impressum-container::before {
+            top: 20px;
+            left: 20px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .impressum-container::after {
+            bottom: 20px;
+            right: 20px;
+            border-left: none;
+            border-top: none;
+        }
+
+        .impressum-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: var(--brown);
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .impressum-section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--brown);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e8dfd0;
+        }
+
+        .impressum-section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .impressum-content {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            color: #7a7264;
+            line-height: 1.8;
+        }
+
+        .impressum-content p {
+            margin-bottom: 10px;
+        }
+
+        .impressum-content strong {
+            color: var(--brown);
+            font-weight: 600;
+        }
+
+        .impressum-content a {
+            color: var(--green);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .impressum-content a:hover {
+            color: var(--brown);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header .container { 
+                padding: 0 20px; 
+            }
+            
+            .logo-text { 
+                font-size: 15px; 
+                margin-left: -15px;
+                color: #768b74;    
+            }
+
+            .nav-list { 
+                gap: 15px;
+            }
+            
+            .nav-list a {
+                font-size: 11px;
+            }
+
+            .impressum-section {
+                padding-top: 80px;
+            }
+
+            .impressum-container {
+                padding: 40px 25px;
+            }
+
+            .impressum-title {
+                font-size: 2rem;
+            }
+
+            .impressum-section-title {
+                font-size: 1.2rem;
+            }
+
+            .impressum-container::before,
+            .impressum-container::after {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        #footer {
+            background: #f4eee4;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        #footer .copyright,
+        #footer .copyright * {
+            color: #5a5446 !important;
+        }
+
+        #footer .copyright a {
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(90, 84, 70, 0.5);
+            transition: border-bottom-color 0.2s ease;
+        }
+
+        #footer .copyright a:hover {
+            border-bottom-color: #5a5446;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-box">
+                <img src="https://raw.githubusercontent.com/projectsbystv/duanacafe/main/logo%20copy.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Du'ana</span>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#speise">Speisekarte</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="impressum-section">
+        <div class="impressum-container">
+            <h1 class="impressum-title">Impressum</h1>
+            
+            <div class="impressum-content">
+                <h2 class="impressum-section-title">Angaben gemäß § 5 TMG</h2>
+                <p><strong>Charlie's Café</strong><br>
+                Schulterblatt 14<br>
+                20357 Hamburg<br>
+                Deutschland</p>
+
+                <h2 class="impressum-section-title">Kontakt</h2>
+                <p><strong>Telefon:</strong> <a href="tel:+4917641133612">+49 17641133612</a><br>
+                <strong>E-Mail:</strong> <a href="mailto:info@charliescafe.de">info@charliescafe.de</a></p>
+
+                <h2 class="impressum-section-title">Umsatzsteuer-ID</h2>
+                <p>Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:<br>
+                <strong>4375601902</strong></p>
+
+                <h2 class="impressum-section-title">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+                <p><strong>Resa Sadeghi</strong><br>
+                Schulterblatt 14<br>
+                20357 Hamburg</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p class="copyright">
+            &copy; 2026 Duana's Café.
+            <a href="impressum.html">Impressum</a>.
+        </p>
+    </footer>
+
+</body>
+</html>
