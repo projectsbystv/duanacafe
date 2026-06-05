@@ -930,16 +930,104 @@
     }
 </script>
             
-            <div class="column" id = "speise">
-                <h3 class="column-title">Folge uns auf Social Media</h3>
-                
-                <div class="social-links">
-                    <a href="#" class="social-icon" style="background-color: #8b7355;"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/duanacafe?igsh=MW1ya252cmlvandrcA==" class="social-icon" style="background-color: #c4896b;"><i class="fab fa-instagram"></i></a>
-                </div> 
-            </div>
-        </div>
+            <style>
+    .social-section {
+        background: #f4eee4;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .social-section-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #8b7355;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .social-section-sub {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.85rem;
+        color: #9a8a78;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+    }
+
+    .social-cards {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .social-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-decoration: none;
+        padding: 30px 40px;
+        border: 1px solid rgba(139, 115, 85, 0.25);
+        background: rgba(255,255,255,0.6);
+        transition: all 0.3s ease;
+        min-width: 160px;
+    }
+
+    .social-card:hover {
+        background: white;
+        border-color: rgba(139, 115, 85, 0.5);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(139, 115, 85, 0.12);
+    }
+
+    .social-card i {
+        font-size: 1.8rem;
+        transition: transform 0.3s;
+    }
+
+    .social-card:hover i {
+        transform: scale(1.1);
+    }
+
+    .social-card-name {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #8b7355;
+    }
+
+    .social-card-handle {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.75rem;
+        color: #9a8a78;
+    }
+
+    .social-card.instagram i { color: #c4896b; }
+    .social-card.tiktok i    { color: #5a5446; }
+</style>
+
+<section class="social-section">
+    <h2 class="social-section-title">Folge uns</h2>
+    <p class="social-section-sub">Bleib immer auf dem Laufenden</p>
+
+    <div class="social-cards">
+        <a href="https://www.instagram.com/duanacafe" target="_blank" class="social-card instagram">
+            <i class="fab fa-instagram"></i>
+            <span class="social-card-name">Instagram</span>
+            <span class="social-card-handle">@duanacafe</span>
+        </a>
+        <a href="#" target="_blank" class="social-card tiktok">
+            <i class="fab fa-tiktok"></i>
+            <span class="social-card-name">TikTok</span>
+            <span class="social-card-handle">@duanacafe</span>
+        </a>
     </div>
+</section>
 
     
 
