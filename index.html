@@ -413,14 +413,20 @@
 
     .elegant-menu-card {
         background: rgba(255, 255, 255, 0.95);
-        border-radius: 2px;
-        padding: 60px 50px;
-        box-shadow: 
-            0 10px 40px rgba(139, 115, 85, 0.15),
-            0 2px 8px rgba(139, 115, 85, 0.08);
-        position: relative;
-        overflow: hidden;
-        backdrop-filter: blur(10px);
+    border-radius: 2px;
+    padding: 40px 30px; /* Etwas kompakteres Padding für Desktop */
+    box-shadow: 
+        0 10px 40px rgba(139, 115, 85, 0.15),
+        0 2px 8px rgba(139, 115, 85, 0.08);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    
+    /* HIER STECKT DIE RETTUNG FÜR DESKTOP: */
+    width: 100%;
+    max-width: 420px; /* Verhindert, dass die Karte auf Desktop riesig wird */
+    margin: 0 auto;   /* Zentriert die Karte in ihrer Spalte */
+    box-sizing: border-box;
     }
 
     /* Decorative Corner Elements */
