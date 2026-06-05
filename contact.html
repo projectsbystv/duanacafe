@@ -337,7 +337,7 @@
 
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo-box" onclick="if(location.pathname.endsWith('index.html') || location.pathname === '/') { window.scrollTo({top:0, behavior:'smooth'}); return false; }">
+            <a href="index.html" class="logo-box" onclick="if(window.location.pathname.includes('index') || window.location.pathname === '/') { event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); }">
                 <img src="https://raw.githubusercontent.com/projectsbystv/duanacafe/main/logo%20copy.png" alt="Logo" class="logo-img">
                 <span class="logo-text">Du'ana</span>
             </a>
